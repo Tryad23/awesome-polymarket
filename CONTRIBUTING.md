@@ -28,7 +28,7 @@ Additions are welcome, including your own tool. This list exists because the oth
 ./check-links.sh          # check every link in README.md
 ```
 
-The script extracts every URL from `README.md` and reports anything that does not resolve. A few hosts (npm, Dune) return `403` to scripted requests while being perfectly fine, so treat the output as a list to review rather than a verdict.
+The script fails only on links that are definitively dead (404, 410, 451). Hosts that block scripted requests (npm, Dune, Substack, Reddit) are reported separately as "could not verify", since CI runners get blocked where a browser works fine.
 
 ## Removing an entry
 
