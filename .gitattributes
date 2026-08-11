@@ -1,0 +1,3 @@
+check-links.sh linguist-detectable=false
+*.md linguist-detectable=true
+*.md linguist-documentation=false
